@@ -1,0 +1,106 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Стилі для контейнера секцій */
+.sections-container {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє елементам переходити на нові рядки при необхідності */
+    gap: 20px; /* Відстань між секціями */
+}
+
+/* Стилі для секцій */
+.section {
+    position: relative;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    flex: 1; /* Кожна секція займає однаковий простір */
+    min-width: 250px; /* Мінімальна ширина секцій */
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Стилі для різних розмірів екрану */
+
+/* Для десктопа (992px і більше) */
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 3em;
+    }
+}
+
+/* Для планшетів (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Для мобільних пристроїв (менше або рівно 767px) */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* Фони для кожної секції */
+#section1 {
+    background-color: #ffebcd; /* Light color for Chicken */
+}
+
+#section2 {
+    background-color: #d3f9d8; /* Light green for Beef */
+}
+
+#section3 {
+    background-color: #ffcccb; /* Light red for Sushi */
+}
+
+/* Встановлення відступів та поля */
+p {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
